@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --laranja-valer: #FF5700;
+    --laranja-claro: #FF7934;
+    --cinza-fonte: #707070;
+    --cinza-fumaca: #f5f5f5;
+    --rosa-valer: #FF478C;
+}
+
+.container {
+    margin: auto;
+    width: 90vw;
+}
+
+body {
+    background-color: var(--cinza-fumaca);
+    font-family: lato;
+}
+
+/*HEADER----------------------------------------------*/
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-valer {
+    margin: 20px 30px 20px 0px;
+    height: 30px;
+}
+
+/*Estilo do menu*/
+
+header nav ul li, a {
+    font-size: 0.9em;
+    font-family: lato;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+header nav ul li a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 0px 5px 0px;
+}
+
+.login a {
+    display: flex;
+    flex-direction: row;
+}
+
+.barra-desktop {
+    justify-content: space-between;
+    display: flex;
+}
+
+.barra-cima {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.barra-desktop nav ul li a {
+    color: var(--cinza-fonte);
+}
+
+.barra-desktop nav ul .login {
+    color: var(--laranja-valer);
+}
+
+.barra-desktop nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.barra-desktop nav ul li:hover {
+    border-bottom: solid 2px var(--laranja-valer);
+}
+
+.sub-barra ul li a {
+    color: var(--laranja-valer);
+}
+
+.background-laranja {
+    background-color: var(--laranja-valer);
+}
+
+.background-branco {
+    background-color: white;
+}
+
+.categorias {
+    background-color: white;
+    padding: 30px;
+    border: none;
+    cursor: pointer;
+    color: var(--laranja-valer);
+}
+
+.barra_pesquisa {
+    border: solid 1px white;
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--cinza-fonte);
+    background-color: white;
+    flex-grow: 1;
+    margin: 0px 200px 0px 20px;
+}
+
+.barra_pesquisa input {
+    background-color: transparent;
+    color: var(--cinza-fonte);
+    border: none;
+}
+
+/*Barra de pesquisa e botão de categorias mobile*/
+
+.barra_pesquisa-mobile {
+    display: flex;
+    border: solid 1px var(--cinza-fumaca);
+    border-radius: 30px;
+    background-color: var(--cinza-fumaca);
+    padding: 8px;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.barra_pesquisa-mobile input {
+    background-color: transparent;
+    border: none;
+}
+
+.barra_pesquisa-mobile i {
+    color: var(--cinza-fonte);
+    margin-right: 8px;
+}
+
+.search-cat a i {
+    margin-right: 8px;
+}
+
+.search-cat {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.search-cat a {
+    border: solid 1px var(--laranja-valer);
+    border-radius: 30px;
+    background-color: var(--laranja-valer);
+    padding: 8px;
+}
+
+/*----------------------------------------------*/
+
+/*HOME - produtos destaques*/
+
+.onde_vende {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.vitrine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.onde_vende a {
+    color: var(--laranja-valer);
+}
+
+.preco {
+    color: var(--laranja-valer);
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.btn-reserva {
+    border-radius: 4px;
+    background-color: var(--laranja-valer);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.btn-reserva i {
+    margin-left: 5px;
+}
+
+.vence {
+    color: red;
+}
+
+.produtos {
+    display: flex;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+
+.card-produto {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    -webkit-box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.foto_produto {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.foto_produto img {
+    height: 150px;
+}
+
+.informacoes_produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5em;
+    text-align: left;
+    font-size: 0.85em;
+}
+
+.informacoes_produto img {
+    height: 50px;
+}
+
+.vencimento p {
+    padding: 5px 8px;
+    font-size: 1.1em;
+    color: white;
+    margin-top: 20px;
+    background-color: var(--rosa-valer);
+}
+
+/*--------------------------------------------*/
+
+/*MAIN----------------------------------------*/
+
+/*-------------------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    header {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .barra-desktop {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .barra-mobile {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .barra-mobile {
+        display: none;
+    }
+    .container {
+        width: 70vw;
+    }
+    .search-cat {
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .produtos{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card-produto{
+        margin-right: 20px;
+        
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
