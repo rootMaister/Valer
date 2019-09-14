@@ -168,6 +168,13 @@ header nav ul li a {
 /*----------------------------------------------*/
 
 /*HOME - produtos destaques*/
+.banner{
+    background-image: url(../img/banner-home.png);
+    height: 430px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 
 .onde_vende {
     display: flex;
@@ -183,6 +190,12 @@ header nav ul li a {
 
 .onde_vende a {
     color: var(--laranja-valer);
+}
+
+.onde_vende h3 {
+    font-size: 1em;
+    color: var(--cinza-fonte);
+    
 }
 
 .preco {
@@ -305,12 +318,17 @@ header nav ul li a {
 @media only screen and (min-width: 992px) {
     .produtos{
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        align-content: center;
+        
     }
 
     .card-produto{
-        margin-right: 20px;
-        
+        justify-content: 
+    }
+
+    .vencimento p{
+        margin-top: 85px; 
     }
 }
 
