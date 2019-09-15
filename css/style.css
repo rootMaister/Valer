@@ -155,7 +155,7 @@ header nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .search-cat a {
@@ -256,6 +256,7 @@ header nav ul li a {
     line-height: 2.5em;
     text-align: left;
     font-size: 0.85em;
+    color: #707070;
 }
 
 .informacoes_produto img {
@@ -271,8 +272,31 @@ header nav ul li a {
 }
 
 /*--------------------------------------------*/
+/*-----------------GERENCIAMENTO DE PRODUTOS--------*/
 
-/*MAIN----------------------------------------*/
+.cads{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.cad{
+    background-color: var(--laranja-valer);
+    padding: 15px;
+    border-radius: 4px;
+    line-height: 1.5em;
+}
+
+.icon-cad{
+    font-size: 2em;
+    color: var(--laranja-valer);
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+}
+
 
 /*-------------------------------------------------*/
 
