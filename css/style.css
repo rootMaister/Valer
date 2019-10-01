@@ -379,6 +379,10 @@ header nav ul li a {
     align-items: center;
     justify-content: center;
   }
+
+  .cover-cadastro:target{
+    right: 0;
+  }
   
   
   .btn-login{
@@ -445,8 +449,15 @@ header nav ul li a {
 
     .vencimento{
         position: absolute;
+        border-radius: 10px 0px 0px 0px;
         bottom: 0px;
+    }
 
+    .btn-reserva{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 0;
 
     }
 
