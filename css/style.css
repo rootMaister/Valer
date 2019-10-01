@@ -10,6 +10,7 @@
     --cinza-fonte: #707070;
     --cinza-fumaca: #f5f5f5;
     --rosa-valer: #FF478C;
+    --azul-valer: #00B6FF;
 }
 
 .container {
@@ -169,18 +170,22 @@ header nav ul li a {
 
 /*HOME - produtos destaques*/
 .banner{
-    background-image: url(../img/banner-home.png);
-    height: 430px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    display: flex;
+    justify-content: center;
 }
 
 .onde_vende {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
     margin-top: 50px;
+}
+
+.vermais{
+    background-color: #FF7934;
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .vitrine {
@@ -189,15 +194,23 @@ header nav ul li a {
 }
 
 .onde_vende a {
-    color: var(--laranja-valer);
+    font-size: 1.2em;
+    /* color: var(--laranja-valer); */
 }
 
 .onde_vende h3 {
-    font-size: 1em;
-    color: var(--cinza-fonte);
-    
+    font-size: 2em;
+    color: var(--cinza-fonte); 
 }
 
+.mercado{
+    color: white;
+    padding: 15px;
+    background-color: var(--azul-valer);
+}
+
+
+/*               CARD DOS PRODUTOS          */
 .preco {
     color: var(--laranja-valer);
     font-weight: 100;
@@ -246,7 +259,7 @@ header nav ul li a {
 }
 
 .foto_produto img {
-    height: 150px;
+    height: 200px;
 }
 
 .informacoes_produto {
@@ -255,35 +268,126 @@ header nav ul li a {
     align-items: center;
     line-height: 2.5em;
     text-align: left;
-    font-size: 0.85em;
+    font-size: 1em;
     color: #707070;
 }
 
-.informacoes_produto img {
+.marca-mercado{
     height: 50px;
 }
 
+.vencimento{
+    display: flex;
+    align-content: flex-start;
+
+    text-align: center;
+}
 .vencimento p {
     padding: 5px 8px;
     font-size: 1.1em;
     color: white;
-    margin-top: 20px;
+    
     background-color: var(--rosa-valer);
 }
-/*------MODAL CADASTRO/LOGIN------------------*/
-.bg-modal{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
+
+.avaliacao{
+    height: 120px;
 }
 
-.modal-conteudo{
-    width: 500px;
-    height: 300px;
-    background-color: var(--laranja-valer);
-}
+/*               FIM - CARD PRODUTOS         */
+/*------MODAL CADASTRO/LOGIN------------------*/
+
+.fundo-modal{
+    position: fixed;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .fundo-modal:target{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .fechar{
+    right: 20px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .conteudo-modal{
+    position: relative;
+    background-color: white;
+    width: 800px;
+    height: 400px;
+    display: flex;
+  }
+  
+  .cadastro-modal{
+    background-color: #707070;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cadastro-modal form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  
+  .cadastro-modal form input{
+    margin: 5px;
+  }
+  
+  /*LOGIN*/
+  .login-modal{
+    background-color: #F5F5F5;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-modal form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+  
+  .login-modal form input{
+    margin: 5px;
+  }
+  
+  
+  .cover-cadastro{
+    position: absolute;
+    background-color: orange;
+    width: 400px;
+    height: 400px;
+    right: ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .btn-login{
+    border: none;
+    background-color: white;
+    color: #707070;
+    padding: 10px 40px;
+    text-transform: uppercase;
+  }
 
 /*--------------------------------------------*/
 /*-----------------GERENCIAMENTO DE PRODUTOS--------*/
@@ -314,20 +418,47 @@ header nav ul li a {
 
 /*-------------------------------------------------*/
 
-/* Extra small devices (phones, 600px and down) */
+/* Dispositivos pequenos (celulares, 600px pra baixo) */
 
 @media only screen and (max-width: 600px) {
     header {
         position: fixed;
         bottom: 0;
         width: 100%;
+        z-index: 1;
     }
     .barra-desktop {
         display: none;
     }
+
+    .banner{
+        display: none;
+    }
+
+    .card-produto{
+        position: relative;
+    }
+
+    .foto_produto{
+        justify-content: space-between;
+    }
+
+    .vencimento{
+        position: absolute;
+        bottom: 0px;
+
+
+    }
+
+
+    
+
+   
+
+
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Dispositivos pequenos (tablets em modo retrato e celulares 600px pra cima) */
 
 @media only screen and (min-width: 600px) {
     .barra-mobile {
@@ -335,9 +466,12 @@ header nav ul li a {
         bottom: 0;
         width: 100%;
     }
+
+
+
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Dispositivos médios (tablets em modo paisagem, 768px pra cima) */
 
 @media only screen and (min-width: 768px) {
     .barra-mobile {
@@ -349,9 +483,19 @@ header nav ul li a {
     .search-cat {
         display: none;
     }
+    
+    .banner{
+        margin-top: 90px;
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Dispositivos grandes (Notebooks/desktops, 992px pra cima) */
 
 @media only screen and (min-width: 992px) {
     .produtos{
@@ -366,10 +510,14 @@ header nav ul li a {
     }
 
     .vencimento p{
-        margin-top: 85px; 
+        margin-top: 135px; 
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Dispositivos extra-grandes (Notebooks e desktops, 1366px pra cima) */
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1366px) {
+    .vencimento p{
+        margin-top: 0px; 
+    }
+}

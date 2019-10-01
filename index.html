@@ -11,10 +11,35 @@
 </head>
 
 <body>
-    <div class="bg-modal">
-        <div class="modal-conteudo">
-            
-        </div>
+    <div id="login" class="fundo-modal">
+        <div class="conteudo-modal">
+            <a class="fechar" href="#">X</a>
+            <div class="cadastro-modal">
+                <img src="" alt="">
+                <form action="">
+                    <input type="text" placeholder="Insira seu nome e sobrenome">
+                    <input type="text" placeholder="Insira seu email">
+                    <input type="text" placeholder="insira seu CPF ou CNPJ">
+                </form>
+            </div>
+
+            <div class="login-modal">
+                <img src="" alt="">
+                <form action="">
+                    <input type="text" placeholder="Insira seu nome e sobrenome">
+                    <input type="text" placeholder="Insira seu email">
+                    <input type="text" placeholder="insira seu CPF ou CNPJ">
+                </form>
+            </div>
+
+            <div class="cover-cadastro">
+                <button class="btn-login">
+                    login
+                </button>
+            </div>
+
+    </div>
+
     </div>
     <header>
         <div class="background-laranja">
@@ -40,7 +65,7 @@
                             <i class="fas fa-search"></i>
                             <input type="search" id="pesquisa-produtos" name="" placeholder="O que procura ?">
                         </div>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> Luz, São Paulo - SP</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Santa Cecilia, São Paulo - SP</a>
                     </nav>
                 </div>
         </div>
@@ -53,7 +78,8 @@
                         <li><a href="#">Buscar outros mercados</a></li>
                         <li><a href="#">Como funciona?</a></li>
                         <li><a href="#">Vender</a></li>
-                        <li class="login"><a class="login" href="#"><i class="fas fa-user"></i> Entrar/Cadastrar</a>
+                        <li class="login"><a class="login" href="#login"><i class="fas fa-user"></i>
+                                Entrar/Cadastrar</a>
                         </li>
                     </ul>
                 </nav>
@@ -77,11 +103,12 @@
         </div>
 
         <div class="banner container">
+            <img class="listras" src="img/banner-home.png" alt="">
         </div>
-
+        <!-- INICIO DA VITRINE DOS PRODUTOS -->
         <div class="onde_vende container">
-            <h3>Destaques</h3><a href="#">Extra - 9 de Julho</a><a href="#">Ver mais <i
-                    class="fas fa-sign-in-alt"></i></a>
+            <h3>Destaques</h3><a class="mercado" href="#">Extra - 9 de Julho</a><a class="vermais" href="#">Ver mais
+                produtos dessa loja <i class="fas fa-sign-in-alt"></i></a>
         </div>
 
         <section class="container">
@@ -95,9 +122,12 @@
                         <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
                     </div>
                     <div class="informacoes_produto">
-                        <img src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
                         <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
                         <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
                         <div class="vencimento">
                             <p>Vence em 14 dias</p>
                         </div>
@@ -113,9 +143,12 @@
                         <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
                     </div>
                     <div class="informacoes_produto">
-                        <img src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
                         <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
                         <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
                         <div class="vencimento">
                             <p>Vence em 14 dias</p>
                         </div>
@@ -131,18 +164,86 @@
                         <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
                     </div>
                     <div class="informacoes_produto">
-                        <img src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
                         <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
                         <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
                         <div class="vencimento">
                             <p>Vence em 14 dias</p>
                         </div>
                     </div>
                 </div>
-
             </div>
 
+            <div class="container produtos">
+                <div class="card-produto">
+                    <div class="foto_produto">
+                        <img src="img/produtos/Suco-de-Uva-Maguary-Selecao-Tinto-15l.png"
+                            alt="Imagem do Suco de Uva Maguary Concentrado">
+                        <p class="preco">R$3,25</p>
+                        <p class="preco-riscado"></p>
+                        <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
+                    </div>
+                    <div class="informacoes_produto">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
+                        <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
+                        <div class="vencimento">
+                            <p>Vence em 14 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-produto">
+                    <div class="foto_produto">
+                        <img src="img/produtos/Suco-de-Uva-Maguary-Selecao-Tinto-15l.png"
+                            alt="Imagem do Suco de Uva Maguary Concentrado">
+                        <p class="preco">R$3,25</p>
+                        <p class="preco-riscado"></p>
+                        <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
+                    </div>
+                    <div class="informacoes_produto">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
+                        <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
+                        <div class="vencimento">
+                            <p>Vence em 14 dias</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-produto">
+                    <div class="foto_produto">
+                        <img src="img/produtos/Suco-de-Uva-Maguary-Selecao-Tinto-15l.png"
+                            alt="Imagem do Suco de Uva Maguary Concentrado">
+                        <p class="preco">R$3,25</p>
+                        <p class="preco-riscado"></p>
+                        <button class="btn-reserva">Reservar<i class="fas fa-calendar-check"></i></button>
+                    </div>
+                    <div class="informacoes_produto">
+                        <img class="marca-mercado" src="img/marcas/logo_extra.jpg" alt="logo mercado Extra">
+                        <h3 class="titulo_produto">Suco de Uva Maguary - 500ml</h3>
+                        <p class="local_venda">Vendido por: <span>Extra 9 de Julho</span></p>
+                        <img class="avaliacao"
+                            src="img/evaluation-five-star-rating-favorite-like-recommend-icon-of-star-rating-png-256_256.png"
+                            alt="">
+                        <div class="vencimento">
+                            <p>Vence em 14 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+
     </main>
 </body>
 
