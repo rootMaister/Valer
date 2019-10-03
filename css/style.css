@@ -75,8 +75,14 @@ header nav ul li a {
     color: var(--cinza-fonte);
 }
 
+
+
 .barra-desktop nav ul .login {
     color: var(--laranja-valer);
+}
+
+.barra-desktop nav ul .login:hover {
+    color: white;
 }
 
 .barra-desktop nav ul {
@@ -85,8 +91,14 @@ header nav ul li a {
     justify-content: space-between;
 }
 
-.barra-desktop nav ul li:hover {
+.barra-desktop nav ul li :hover {
     border-bottom: solid 2px var(--laranja-valer);
+    padding: 10px 5px;
+    background-color: var(--laranja-valer);
+}
+
+.barra-desktop nav ul li a :hover{
+    color: white;
 }
 
 .sub-barra ul li a {
@@ -185,7 +197,7 @@ header nav ul li a {
 .vermais{
     background-color: #FF7934;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 0px;
 }
 
 .vitrine {
@@ -200,7 +212,9 @@ header nav ul li a {
 
 .onde_vende h3 {
     font-size: 2em;
-    color: var(--cinza-fonte); 
+    color: white; 
+    background-color: var(--rosa-valer);
+    padding: 31px 0px; 
 }
 
 .mercado{
@@ -224,10 +238,15 @@ header nav ul li a {
     border: none;
     padding: 15px 25px;
     font-size: 1.2em;
-    margin-top: 5px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .btn-reserva i {
+
+
     margin-left: 5px;
 }
 
@@ -279,14 +298,13 @@ header nav ul li a {
 .vencimento{
     display: flex;
     align-content: flex-start;
-
     text-align: center;
+    
 }
 .vencimento p {
     padding: 5px 8px;
     font-size: 1.1em;
     color: white;
-    
     background-color: var(--rosa-valer);
 }
 
@@ -379,10 +397,6 @@ header nav ul li a {
     align-items: center;
     justify-content: center;
   }
-
-  .cover-cadastro:target{
-    right: 0;
-  }
   
   
   .btn-login{
@@ -400,7 +414,7 @@ header nav ul li a {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 180px;
     font-weight: 700;
 }
 
@@ -421,6 +435,71 @@ header nav ul li a {
 
 
 /*-------------------------------------------------*/
+
+
+/* Adicionar Produto */
+
+.card_add_produto {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;   
+    margin-bottom: 30px;
+    display: flex;
+    color: gray;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.form_add_produto {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.form_add_produto input {
+    height: 30px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.form_add_produto label {
+    color: var(--laranja-valer);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+}
+.form_add_produto p {
+    margin-bottom: 10px;
+}
+.form_add_produto .img_add {
+    height: 50px;
+    width: 110px;
+    background-color: #FF5700;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.form_add_produto button {
+    height: 40px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: var(--laranja-valer);
+}
+output {
+    text-align: center;
+}
+
+.form_add_produto input::placeholder {
+    padding: 5px;
+}
+
+
+/*--------------------------------------------*/
 
 /* Dispositivos pequenos (celulares, 600px pra baixo) */
 
@@ -449,24 +528,13 @@ header nav ul li a {
 
     .vencimento{
         position: absolute;
-        border-radius: 10px 0px 0px 0px;
-        bottom: 0px;
-    }
-
-    .btn-reserva{
-        position: absolute;
         bottom: 0;
-        left: 0;
-        border-radius: 0;
-
+        right: 0;
     }
 
-
-    
-
-   
-
-
+    .vencimento p{
+        border-radius: 30px 0px 0px 0px;
+    }
 }
 
 /* Dispositivos pequenos (tablets em modo retrato e celulares 600px pra cima) */
@@ -478,8 +546,13 @@ header nav ul li a {
         width: 100%;
     }
 
+    .vermais{
+        border-radius: 15px;
+    }
 
-
+    .cads{
+        margin-top: 20px;
+    }
 }
 
 /* Dispositivos médios (tablets em modo paisagem, 768px pra cima) */
@@ -504,6 +577,18 @@ header nav ul li a {
         top: 0;
         width: 100%;
     }
+
+    .btn-reserva{
+        position: unset;
+        bottom: ;
+        left: ;
+
+        margin-bottom: 0px;
+    }
+
+    
+
+    
 }
 
 /* Dispositivos grandes (Notebooks/desktops, 992px pra cima) */
@@ -531,4 +616,23 @@ header nav ul li a {
     .vencimento p{
         margin-top: 0px; 
     }
+
+    .onde_vende h3 {
+        font-size: 2em;
+        color: var(--cinza-fonte); 
+        background-color: rgba(0, 0, 0, 0);
+        padding: 31px 0px; 
+    }
+
+    .card_add_produto{
+        display: flex;
+        flex-direction: row;
+        margin-top: 120px;
+    }
+
+    .cads{
+        margin-top: 120px;
+    }
+
+    
 }
