@@ -39,6 +39,7 @@
                         <a href="#"><i class="fas fa-map-marker-alt"></i> Luz, São Paulo - SP</a>
                     </nav>
                 </div>
+            </nav>    
         </div>
 
         <div class="background-branco">
@@ -47,9 +48,9 @@
                     <ul>
                         <li><a href="index.html">Destaques</a></li>
                         <li><a href="busca.html">Buscar outros mercados</a></li>
-                        <li><a href="#">Como funciona?</a></li>
+                        <li><a href="Sobre.html">Como funciona?</a></li>
                         <li><a href="gerenciamento de produtos.html">Vender</a></li>
-                        <li class="login"><a class="login" href="#"><i class="fas fa-user"></i> Entrar/Cadastrar</a>
+                        <li class="login"><a class="login" href="Cadastro.html"><i class="fas fa-user"></i> Entrar/Cadastrar</a>
                         </li>
                     </ul>
                 </nav>
@@ -59,13 +60,13 @@
 
     <main>
         <div class="container">
-            <h1>Adicionar Produto</h1>
+            <h1 class="titulo_add_produto">Adicionar Produto</h1>
             <div class="card_add_produto">
 
                 <form class="form_add_produto">
                     <label>
                         <p>Nome Do Produto</p>
-                        <input type="text" name="add_nome" id="add_nomeid" placeholder="Digite seu Nome">
+                        <input type="text" name="add_nome" id="add_nomeid" placeholder="Digite o nome do produto">
                     </label>
                     <label>
                         <p>Imagem do Produto</p>
@@ -92,16 +93,14 @@
                 <form class="form_add_produto">
                     <label>
                         <p>Quantidade</p>
-                        <input type="number" name="add_quantidade" id="add_quantidadeid" placeholder="Produtos em estoque">
+                        <input type="number" name="add_quantidade" id="add_quantidadeid" placeholder="Quantidade em estoque">
                     </label>
                     <label>
                         <p>Doação ?</p>
-                        <select id="resposta">
-                            <option>Escolha uma Resposta</option>
-                            <option>Sim</option>
-                            <option>Não</option>
-                        </select>
-                        
+                        <div class="doacao">
+                            <input type="radio" name="doacao">Sim
+                            <input type="radio" name="doacao">Não
+                        </div>
                     </label>
                     <label>
                         <p>Descrição</p>
