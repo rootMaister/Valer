@@ -89,14 +89,9 @@ header nav ul li a {
     justify-content: space-between;
 }
 
-.barra-desktop nav ul li :hover {
-    border-bottom: solid 2px var(--laranja-valer);
-    padding: 10px 5px;
-    background-color: var(--laranja-valer);
-}
 
-.barra-desktop nav ul li a :hover {
-    color: white;
+.barra-desktop nav ul li :hover {
+    color: var(--laranja-valer);
 }
 
 .sub-barra ul li a {
@@ -446,6 +441,9 @@ header nav ul li a {
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    -webkit-box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
 }
 
 .form_add_produto {
@@ -454,12 +452,19 @@ header nav ul li a {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    
 }
 
 .form_add_produto input {
     height: 30px;
     border-radius: 4px;
     margin-bottom: 10px;
+    background-color: none;
+    border: none;
+    border-bottom: solid 2px var(--laranja-valer);
+    border-radius: 0;
+    font-size: 1.2em;
+
 }
 
 .form_add_produto label {
@@ -472,6 +477,7 @@ header nav ul li a {
 
 .form_add_produto p {
     margin-bottom: 10px;
+    font-size: 1.4em;
 }
 
 .form_add_produto .img_add {
@@ -491,6 +497,8 @@ header nav ul li a {
     font-size: 15px;
     color: white;
     background-color: var(--laranja-valer);
+    border: none;
+    border-radius: 4px;
 }
 
 output {
@@ -727,7 +735,7 @@ a::placeholder, i::placeholder {
 .card-comentario {
     background-color: white;
     height: 400px;
-    width: 78%;
+    width: 100%;
     margin-bottom: 30px;
     border-radius: 4px;
     -webkit-box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
@@ -767,7 +775,7 @@ a::placeholder, i::placeholder {
     box-shadow: 6px 10px 14px -3px rgba(0, 0, 0, 0.1);
     width: 250px;
     height: 300px;
-    padding: 30px;
+    padding: 80px;
 }
 
 .descricao-texto {
@@ -776,7 +784,7 @@ a::placeholder, i::placeholder {
     align-items: center;
     line-height: 3.1em;
     text-align: left;
-    font-size: 0.99em;
+    font-size: 1em;
     color: #707070;
     width: 240px;
     height: 400px;
@@ -787,12 +795,14 @@ a::placeholder, i::placeholder {
     background-color: #FF478C;
 }
 
-.container-produtos {
+.container-produtos{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: auto;
     width: 90vw;
     padding: 5px;
+    justify-content: space-between;
 }
 
 .foto-produto-suco-veja-mais {
@@ -947,6 +957,10 @@ a::placeholder, i::placeholder {
         left: ;
         margin-bottom: 0px;
     }
+
+    .container-produtos{
+        flex-direction: column;
+    }
 }
 
 /* Dispositivos grandes (Notebooks/desktops, 992px pra cima) */
@@ -984,5 +998,9 @@ a::placeholder, i::placeholder {
     }
     .cads {
         margin-top: 120px;
+    }
+
+    .container-produtos{
+        flex-direction: row;
     }
 }
