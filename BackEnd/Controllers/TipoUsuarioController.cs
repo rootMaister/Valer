@@ -9,61 +9,61 @@ namespace BackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriaController : ControllerBase
+    public class TipoUsuarioController : ControllerBase
     {
 
         VallerContext _context = new VallerContext();
 
         [HttpGet]
-        public async Task<ActionResult<List<Categoria>>> Get() {
+        public async Task<ActionResult<List<TipoUsuario>>> Get() {
 
-            var categorias = await _context.Categoria.ToListAsync();
+            var tipousuarios = await _context.TipoUsuario.ToListAsync();
 
-            if(categorias == null) {
+            if(tipousuarios == null) {
                 return NotFound();
             }
-            return categorias;
+            return tipousuarios;
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Categoria>> Get(int id) {
+        public async Task<ActionResult<TipoUsuario>> Get(int id) {
 
-            var categoria = await _context.Categoria.FindAsync(id);
+            var tipousuario = await _context.TipoUsuario.FindAsync(id);
 
-            if (categoria == null ) {
+            if (tipousuario == null ) {
                 return NotFound();
             }
-            return categoria;
+            return tipousuario;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Categoria>> Post(Categoria categoria) {
+        public async Task<ActionResult<TipoUsuario>> Post(TipoUsuario tipousuario) {
             
             try {
-                await _context.Categoria.AddAsync(categoria);
+                await _context.TipoUsuario.AddAsync(tipousuario);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException) {
                 throw;
             }
-            return categoria;
+            return tipousuario;
         }
         
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, Categoria categoria){
+        public async Task<ActionResult> Put(int id, TipoUsuario tipousuario){
 
-            if(id != categoria.IdCategoria) {
+            if(id != tipousuario.IdTipoUsuario) {
                 return BadRequest();
             }
 
-            _context.Entry(categoria).State = EntityState.Modified;
+            _context.Entry(tipousuario).State = EntityState.Modified;
 
             try {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException) {
-                var categoria_valido = _context.Categoria.FindAsync(id);
-                if(categoria_valido == null) {
+                var tipousuario_valido = _context.TipoUsuario.FindAsync(id);
+                if(tipousuario_valido == null) {
                     return NotFound();
                 }
                 else {
@@ -74,16 +74,16 @@ namespace BackEnd.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Categoria>> Delete(int id){
+        public async Task<ActionResult<TipoUsuario>> Delete(int id){
 
-            var categoria = await _context.Categoria.FindAsync(id);
+            var tipousuario = await _context.TipoUsuario.FindAsync(id);
             
-            if(categoria == null){
+            if(tipousuario == null){
                 return NotFound();
             }
-            _context.Categoria.remove(categoria);
+            _context.TipoUsuario.remove(tipousuario);
             await _context.SaveChangesAsync();
-            return categoria;
+            return tipousuario;
         }
     }
 }
