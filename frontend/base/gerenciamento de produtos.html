@@ -5,14 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gerenciamento de produtos</title>
+    <title>Página inicial Valer</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="https://kit.fontawesome.com/596c3beb95.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <div id="login" class="fundo-modal">
+        <div class="conteudo-modal">
+            <a class="fechar" href="#">X</a>
+            <div class="cadastro-modal">
+                <img src="" alt="">
+                <form action="">
+                    <input type="text" placeholder="Insira seu nome e sobrenome">
+                    <input type="text" placeholder="Insira seu email">
+                    <input type="text" placeholder="insira seu CPF ou CNPJ">
+                </form>
+            </div>
 
+            <div class="login-modal">
+                <img src="" alt="">
+                <form action="">
+                    <input type="text" placeholder="Insira seu nome e sobrenome">
+                    <input type="text" placeholder="Insira seu email">
+                    <input type="text" placeholder="insira seu CPF ou CNPJ">
+                </form>
+            </div>
+
+            <div class="cover-cadastro">
+                <button class="btn-login">
+                    login
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+    <header>
         <div class="background-laranja">
             <nav class="container">
                 <ul class="barra-mobile">
@@ -27,36 +59,60 @@
 
         <div class="background-laranja">
             <nav class="container">
-                <div class="barra-desktop">
+                <div class="barra-desktop container">
                     <nav class="barra-cima">
-                        <a href="index.html"><img class="logo-valer" src="img/logo-valer.png"
+                        <a href="index.html"><img class="logo-valer" src="img/valler_logo_novo.png"
                                 alt="Logo da Valer - Clicar para Voltar para a página inicial"></a>
                         <button class="categorias">Categorias <i class="fas fa-bars"></i></button>
-                        <div class="barra_pesquisa">
+                        <!-- <div class="">
                             <i class="fas fa-search"></i>
-                            <input type="search" id="pesquisa-produtos" name="" placeholder="O que procura ?">
-                        </div>
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> Luz, São Paulo - SP</a>
+                            <input class="uk-search-input" type="search" id="pesquisa-produtos" name="" placeholder="O que procura ?">
+                        </div> -->
+                        <nav class="uk-navbar-container uk-navbar">
+                            <div class="uk-navbar-left container">
+
+                                <div class="uk-navbar-item">
+                                    <form class="uk-search uk-search-navbar">
+                                        <span uk-search-icon></span>
+                                        <input class="uk-search-input" type="search" placeholder="O que procura ?">
+                                    </form>
+                                </div>
+
+                            </div>
+                        </nav>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Santa Cecilia, São Paulo - SP</a>
                     </nav>
                 </div>
+            </nav>
         </div>
 
         <div class="background-branco">
-            <div class="barra-desktop">
-                <nav class="container">
+            <div class="barra-desktop container">
+                <!-- <nav class="container">
                     <ul>
                         <li><a href="index.html">Destaques</a></li>
                         <li><a href="busca.html">Buscar outros mercados</a></li>
                         <li><a href="Sobre.html">Como funciona?</a></li>
                         <li><a href="gerenciamento de produtos.html">Vender</a></li>
-                        <li class="login"><a class="login" href="Cadastro.html"><i class="fas fa-user"></i> Entrar/Cadastrar</a>
+                        <li class="login"><a class="login" href="Cadastro.html"><i class="fas fa-user"></i>
+                                Entrar/Cadastrar</a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
+
+                <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                    <li class="submenu"><a href="index.html">Destaques</a></li>
+                    <li  class="uk-active submenu"><a href="#">Vender</a></li>
+                    <li><a href="gerenciamento de produtos.html">Vender</a></li>
+                    <li class="submenu"><a href="#">Item</a></li>
+                    <li class="submenu"><a href="#">Item</a></li>
+                </ul>
+
             </div>
         </div>
 
     </header>
+
 
     <main>
 
@@ -82,7 +138,8 @@
                 <div class="barra_pesquisa-mobile">
                     <i class="fas fa-search"></i>
                     <label for="pesquisa-produtos-cadastrados">
-                        <input type="search" id="pesquisa-produtos-cadastrados" name="" placeholder=" Buscar por # ou Título">
+                        <input type="search" id="pesquisa-produtos-cadastrados" name=""
+                            placeholder=" Buscar por # ou Título">
                     </label>
                 </div>
                 <a href="#"><i class="fas fa-bars"></i>categorias</a>
@@ -153,11 +210,11 @@
                 </div>
             </div>
 
-            
-        </section>
+
+            </section>
         </div>
 
-       
+
 
     </main>
 </body>

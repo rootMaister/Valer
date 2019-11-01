@@ -1,3 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 * {
     margin: 0;
@@ -11,6 +17,11 @@
     --cinza-fumaca: #f5f5f5;
     --rosa-valer: #FF478C;
     --azul-valer: #00B6FF;
+    --preto-valler: #343330;
+}
+
+.laranja-valler{
+    color: var(--laranja-valer);
 }
 
 .container {
@@ -32,7 +43,7 @@ header nav ul {
 
 .logo-valer {
     margin: 20px 30px 20px 0px;
-    height: 36px;
+    height: 50px;
 }
 
 /*Estilo do menu*/
@@ -61,9 +72,6 @@ header nav ul li a {
 
 .barra-desktop {
     justify-content: space-between;
-    display: flex;
-    
-
 }
 
 .barra-cima {
@@ -107,17 +115,18 @@ header nav ul li a {
 }
 
 .background-branco {
-    background-color: white;
+    background-color: var(--preto-valler);
 }
 
 .categorias {
-    background-color: white;
-    padding: 30px;
+    background-color: var(--laranja-valler);
     border: none;
     cursor: pointer;
-    color: var(--laranja-valer);
-    font-size: 1.05em;
+    color: white;
+    font-size: 1.2em;
+    letter-spacing: 1.2px;
 }
+
 
 .barra_pesquisa {
     border: solid 1px white;
@@ -178,6 +187,10 @@ header nav ul li a {
     padding: 8px;
 }
 
+.submenu{
+    height: 8-0px;
+}
+
 /*----------------------------------------------*/
 
 /*HOME - produtos destaques*/
@@ -185,6 +198,11 @@ header nav ul li a {
 .banner {
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
 }
 
 .onde_vende {
@@ -232,7 +250,7 @@ header nav ul li a {
     font-size: 2em;
 }
 
-.btn-reserva {
+/* .btn-reserva {
     border-radius: 4px;
     background-color: var(--laranja-valer);
     color: white;
@@ -243,6 +261,10 @@ header nav ul li a {
     position: absolute;
     bottom: 0;
     left: 0;
+} */
+
+.btn-reserva{
+    
 }
 
 .btn-reserva i {
@@ -1037,7 +1059,7 @@ a::placeholder, i::placeholder {
         display: none;
     }
     .banner {
-        margin-top: 90px;
+        margin-top: 140px;
     }
     header {
         position: fixed;
